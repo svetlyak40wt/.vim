@@ -45,7 +45,8 @@ fun! SetupVAM()
   exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
 
   " Tell VAM which plugins to fetch & load:
-call vam#ActivateAddons(g:addons, {'auto_install' : 0})
+  call vam#ActivateAddons(g:addons, {'auto_install' : 1})
+
   " sample: call vam#ActivateAddons(['pluginA','pluginB', ...], {'auto_install' : 0})
 
   " Addons are put into vam_install_path/plugin-name directory
