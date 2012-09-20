@@ -2,7 +2,7 @@
 "  Включаем менеджер пакетов
 " ---------------------------------
 
-let g:addons = ['snipmate-snippets', 'Solarized', 'surround', 'fugitive', 'listmaps', 'cscope', 'github:scrooloose/nerdtree', 'ack', 'nerdtree-ack', 'tComment', 'matchit.zip', 'sparkup', 'Syntastic', 'unimpaired', 'github:svetlyak40wt/vim-local-settings']
+let g:addons = ['snipmate-snippets', 'Solarized', 'surround', 'fugitive', 'listmaps', 'cscope', 'github:scrooloose/nerdtree', 'ack', 'nerdtree-ack', 'tComment', 'matchit.zip', 'sparkup', 'Syntastic', 'unimpaired', 'github:svetlyak40wt/vim-local-settings', 'FuzzyFinder']
 
 
 source ~/.vim/install-addons.vim
