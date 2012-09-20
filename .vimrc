@@ -195,6 +195,7 @@ nnoremap <Leader>4 :tabn 4 <CR>
 nnoremap <Leader>5 :tabn 5 <CR>
 nnoremap <Leader>6 :tabn 6 <CR>
 nnoremap <Leader>t :tabnew <CR>
+nnoremap <Leader>c :tabclose <CR>
 " Переключение в шелл
 nnoremap <Leader>z :sh <CR>
 
