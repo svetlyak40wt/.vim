@@ -2,7 +2,7 @@
 "  Включаем менеджер пакетов
 " ---------------------------------
 
-let g:addons = ['snipmate-snippets', 'Solarized', 'surround', 'fugitive', 'listmaps', 'cscope', 'github:scrooloose/nerdtree', 'ack', 'nerdtree-ack', 'tComment', 'matchit.zip', 'sparkup', 'Syntastic', 'unimpaired', 'github:svetlyak40wt/vim-local-settings']
+let g:addons = ['snipmate-snippets', 'Solarized', 'surround', 'fugitive', 'listmaps', 'cscope', 'github:scrooloose/nerdtree', 'ack', 'nerdtree-ack', 'tComment', 'matchit.zip', 'sparkup', 'Syntastic', 'unimpaired', 'github:svetlyak40wt/vim-local-settings', 'FuzzyFinder']
 
 
 source ~/.vim/install-addons.vim
@@ -65,7 +65,7 @@ set statusline+=\ %l,%c%V " номер строки и номер колонки
 set statusline+=\ %P " позиция в тексте, в процентах
 
 " искать теги в следующих файлах
-set tags=./tags,./../tags,./*/tags,./../../tags
+set tags=tags;/
 
 " Клавиатура и выравнивание
 " Нормальное удаление с помощью BackSpace
@@ -116,75 +116,129 @@ let NERDTreeIgnore=['\.pyc', '\.egg-info', 'develop-eggs', 'dist', 'develop-eggs
 let g:syntastic_check_on_open=1
 
 " --------------------------------
+" Fuzzy Finder
+" --------------------------------
+let g:fuf_modesDisable = []
+let g:fuf_mrufile_maxItem = 400
+let g:fuf_mrucmd_maxItem = 400
+nnoremap <silent> sj     :FufBuffer<CR>
+nnoremap <silent> sk     :FufFileWithCurrentBufferDir<CR>
+nnoremap <silent> sK     :FufFileWithFullCwd<CR>
+nnoremap <silent> s<C-k> :FufFile<CR>
+nnoremap <silent> sl     :FufCoverageFileChange<CR>
+nnoremap <silent> sL     :FufCoverageFileChange<CR>
+nnoremap <silent> s<C-l> :FufCoverageFileRegister<CR>
+nnoremap <silent> sd     :FufDirWithCurrentBufferDir<CR>
+nnoremap <silent> sD     :FufDirWithFullCwd<CR>
+nnoremap <silent> s<C-d> :FufDir<CR>
+nnoremap <silent> sn     :FufMruFile<CR>
+nnoremap <silent> sN     :FufMruFileInCwd<CR>
+nnoremap <silent> sm     :FufMruCmd<CR>
+nnoremap <silent> su     :FufBookmarkFile<CR>
+nnoremap <silent> s<C-u> :FufBookmarkFileAdd<CR>
+vnoremap <silent> s<C-u> :FufBookmarkFileAddAsSelectedText<CR>
+nnoremap <silent> si     :FufBookmarkDir<CR>
+nnoremap <silent> s<C-i> :FufBookmarkDirAdd<CR>
+nnoremap <silent> st     :FufTag<CR>
+nnoremap <silent> sT     :FufTag!<CR>
+nnoremap <silent> s<C-]> :FufTagWithCursorWord!<CR>
+nnoremap <silent> s,     :FufBufferTag<CR>
+nnoremap <silent> s<     :FufBufferTag!<CR>
+vnoremap <silent> s,     :FufBufferTagWithSelectedText!<CR>
+vnoremap <silent> s<     :FufBufferTagWithSelectedText<CR>
+nnoremap <silent> s}     :FufBufferTagWithCursorWord!<CR>
+nnoremap <silent> s.     :FufBufferTagAll<CR>
+nnoremap <silent> s>     :FufBufferTagAll!<CR>
+vnoremap <silent> s.     :FufBufferTagAllWithSelectedText!<CR>
+vnoremap <silent> s>     :FufBufferTagAllWithSelectedText<CR>
+nnoremap <silent> s]     :FufBufferTagAllWithCursorWord!<CR>
+nnoremap <silent> sg     :FufTaggedFile<CR>
+nnoremap <silent> sG     :FufTaggedFile!<CR>
+nnoremap <silent> so     :FufJumpList<CR>
+nnoremap <silent> sp     :FufChangeList<CR>
+nnoremap <silent> sq     :FufQuickfix<CR>
+nnoremap <silent> sy     :FufLine<CR>
+nnoremap <silent> sh     :FufHelp<CR>
+nnoremap <silent> se     :FufEditDataFile<CR>
+nnoremap <silent> sr     :FufRenewCache<CR>
+
+" --------------------------------
 "  Mappings
 " --------------------------------
 
-map ё `
-map й q
-map ц w
-map у e
-map к r
-map е t
-map н y
-map г u
-map ш i
-map щ o
-map з p
-map х [
-map ъ ]
-map ф a
-map ы s
-map в d
-map а f
-map п g
-map р h
-map о j
-map л k
-map д l
-map ж ;
-map э '
-map я z
-map ч x
-map с c
-map м v
-map и b
-map т n
-map ь m
-map б ,
-map ю .
-map Ё ~
-map Й Q
-map Ц W
-map У E
-map К R
-map Е T
-map Н Y
-map Г U
-map Ш I
-map Щ O
-map З P
-map Х {
-map Ъ }
-map Ф A
-map Ы S
-map В D
-map А F
-map П G
-map Р H
-map О J
-map Л K
-map Д L
-map Ж :
-map Э "
-map Я Z
-map Ч X
-map С C
-map М V
-map И B
-map Т N
-map Ь M
-map Б <
-map Ю >
+" map ё `
+" map й q
+" map ц w
+" map у e
+" map к r
+" map е t
+" map н y
+" map г u
+" map ш i
+" map щ o
+" map з p
+" map х [
+" map ъ ]
+" map ф a
+" map ы s
+" map в d
+" map а f
+" map п g
+" map р h
+" map о j
+" map л k
+" map д l
+" map ж ;
+" map э '
+" map я z
+" map ч x
+" map с c
+" map м v
+" map и b
+" map т n
+" map ь m
+" map б ,
+" map ю .
+" map Ё ~
+" map Й Q
+" map Ц W
+" map У E
+" map К R
+" map Е T
+" map Н Y
+" map Г U
+" map Ш I
+" map Щ O
+" map З P
+" map Х {
+" map Ъ }
+" map Ф A
+" map Ы S
+" map В D
+" map А F
+" map П G
+" map Р H
+" map О J
+" map Л K
+" map Д L
+" map Ж :
+" map Э "
+" map Я Z
+" map Ч X
+" map С C
+" map М V
+" map И B
+" map Т N
+" map Ь M
+" map Б <
+" map Ю >
+
+" Переключение между языками
+" https://gist.github.com/3748238
+nnoremap <Leader>r :set keymap=russian-jcuken<CR>
+nnoremap <Leader>e :set keymap=<CR>
+inoremap <Leader>r <ESC>:set keymap=russian-jcuken<CR>a
+inoremap <Leader>e <ESC>:set keymap=<CR>a
 
 
 " Переключение между табами
