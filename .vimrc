@@ -195,6 +195,7 @@ nnoremap <Leader>4 :tabn 4 <CR>
 nnoremap <Leader>5 :tabn 5 <CR>
 nnoremap <Leader>6 :tabn 6 <CR>
 nnoremap <Leader>t :tabnew <CR>
+nnoremap <Leader>T :tabclose <CR>
 " Переключение в шелл
 nnoremap <Leader>z :sh <CR>
 
@@ -215,7 +216,6 @@ nnoremap H 0w
 nnoremap L $
 " Выход из режима редактирования
 inoremap jk <esc>
-inoremap ол <esc>
 inoremap <esc> <nop>
 " Режим вставки
 nnoremap <Leader>p :set paste<CR>i
