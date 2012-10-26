@@ -17,7 +17,7 @@ let maplocalleader = "\\"
 " подсветка синтаксиса
 syntax enable
 " цветовая схема
-set background=dark
+set background=light
 color solarized
 set guifont=Monaco:h14
 " подсветка скобок
