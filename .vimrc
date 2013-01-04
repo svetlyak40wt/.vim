@@ -2,8 +2,11 @@
 "  Включаем менеджер пакетов
 " ---------------------------------
 
-let g:addons = ['snipmate-snippets', 'Solarized', 'surround', 'fugitive', 'listmaps', 'cscope', 'github:scrooloose/nerdtree', 'ack', 'nerdtree-ack', 'tComment', 'matchit.zip', 'sparkup', 'Syntastic', 'unimpaired', 'github:svetlyak40wt/vim-local-settings', 'FuzzyFinder']
+let g:addons = ['snipmate-snippets', 'Solarized', 'surround', 'fugitive', 'listmaps', 'cscope', 'github:scrooloose/nerdtree', 'ack', 'nerdtree-ack', 'tComment', 'matchit.zip', 'sparkup', 'Syntastic', 'unimpaired', 'github:svetlyak40wt/vim-local-settings', 'FuzzyFinder', 'slimv']
 
+" Перенастраиваем хоткеи для Lisp
+" let g:paredit_leader = '\'
+let g:slimv_leader = '\'
 
 source ~/.vim/install-addons.vim
 
