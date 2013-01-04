@@ -273,7 +273,6 @@ nnoremap H 0w
 nnoremap L $
 " Выход из режима редактирования
 inoremap jk <esc>
-inoremap <esc> <nop>
 " Режим вставки
 nnoremap <Leader>p :set paste<CR>i
 nnoremap <Leader>np :set nopaste<CR>
