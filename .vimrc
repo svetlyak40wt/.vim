@@ -108,7 +108,7 @@ set whichwrap=b,s,<,>,[,],l,h
 
 set spelllang=ru,en
 set nospell
-nnoremap ,s :set spell!<CR><BAR>:echo "Spell check: " . strpart("OffOn", 3 * &spell, 3)<CR>
+au FileType markdown nnoremap ,s :set spell!<CR><BAR>:echo "Spell check: " . strpart("OffOn", 3 * &spell, 3)<CR>
 
 " NERD Tree maps
 nnoremap <silent> <LocalLeader><LocalLeader> :NERDTreeToggle<CR>
